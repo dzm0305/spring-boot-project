@@ -32,4 +32,4 @@ spring:
     profiles: test
 
 #可以通过 debug=true来查看，那些自动配置类生效，哪些没有生效。
-debug: true
+#debug: true
