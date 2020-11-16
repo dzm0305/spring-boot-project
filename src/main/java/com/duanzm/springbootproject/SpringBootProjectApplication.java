@@ -59,10 +59,7 @@ public class SpringBootProjectApplication {
     //将springboot应用启动
     public static void main(String[] args) {
         SpringApplication.run(SpringBootProjectApplication.class, args);
-
-
     }
-
 }
 
 
