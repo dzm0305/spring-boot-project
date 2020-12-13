@@ -1,4 +1,4 @@
-package com.duanzm.common.web;
+package com.duanzm.test.web;
 
 import com.duanzm.entity.User;
 import com.duanzm.common.utils.UtilsTest;

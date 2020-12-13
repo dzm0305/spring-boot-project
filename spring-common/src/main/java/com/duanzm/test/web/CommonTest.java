@@ -1,4 +1,4 @@
-package com.duanzm.common.web;
+package com.duanzm.test.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
