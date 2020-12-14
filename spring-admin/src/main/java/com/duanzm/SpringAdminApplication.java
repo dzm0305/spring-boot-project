@@ -2,8 +2,10 @@ package com.duanzm;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@SpringBootApplication
+//因为数据源是自己生成的，所以要去掉原先springboot启动时候自动装配的数据源配置。
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 /**
  * @Target(ElementType.TYPE)
  *      ElementType 这个枚举类型的常量提供了一个简单的分类：注释可能出现在Java程序中的语法位置

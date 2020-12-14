@@ -18,8 +18,6 @@ import java.util.Objects;
 
 /**
  * 多数据源处理
- *
- * @author ruoyi
  */
 @Aspect
 @Order(1)
