@@ -1,6 +1,6 @@
 package com.duanzm.framework.datasource.aspectj;
 
-import com.duanzm.framework.datasource.DynamicDataSource;
+import com.duanzm.framework.datasource.DynamicDataSourceContextHolder;
 import com.duanzm.framework.datasource.annotation.DataSource;
 import com.duanzm.framework.utils.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -36,14 +36,14 @@ public class DataSourceAspect {
         DataSource dataSource = getDataSource(point);
 
         if (StringUtils.isNotNull(dataSource)) {
-            DynamicDataSource.setDataSourceType(dataSource.value().name());
+            DynamicDataSourceContextHolder.setDataSourceType(dataSource.value().name());
         }
 
         try {
             return point.proceed();
         } finally {
             // 销毁数据源 在执行方法之后
-            DynamicDataSource.clearDataSourceType();
+            DynamicDataSourceContextHolder.clearDataSourceType();
         }
     }
 
@@ -56,7 +56,6 @@ public class DataSourceAspect {
         if (Objects.nonNull(dataSource)) {
             return dataSource;
         }
-
         return AnnotationUtils.findAnnotation(signature.getDeclaringType(), DataSource.class);
     }
 

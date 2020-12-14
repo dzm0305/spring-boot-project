@@ -6,6 +6,7 @@ import com.duanzm.framework.datasource.enums.DataSourceType;
 import com.duanzm.test.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -24,6 +25,7 @@ public class UserServiceTest {
      * 切换数据源
      * @return
      */
+    @Transactional
     @DataSource(DataSourceType.SLAVE)
     public List<User> queryUserList2(){
         List<User> list = userMapper.queryUserList2();

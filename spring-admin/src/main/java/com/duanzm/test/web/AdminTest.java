@@ -50,7 +50,9 @@ public class AdminTest {
     public List<User> queryUserList(){
         List<User> list = userServiceTest.queryUserList();
         List<User> list2 = userServiceTest.queryUserList2();
+        List<User> list3 = userServiceTest.queryUserList();
         System.out.println(list2);
+        System.out.println(list3);
         return list;
     }
 }
