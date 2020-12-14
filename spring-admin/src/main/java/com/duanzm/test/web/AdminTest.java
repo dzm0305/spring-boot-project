@@ -55,4 +55,11 @@ public class AdminTest {
         System.out.println(list3);
         return list;
     }
+
+    @ResponseBody
+    @RequestMapping("/addUser")
+    public void addUser(){
+        User user = new User("10", "小o", 3, "2");
+        userServiceTest.addUser(user);
+    }
 }

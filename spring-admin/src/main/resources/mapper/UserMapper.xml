@@ -12,4 +12,7 @@
         select id, name, age, sex from duanzm.person
     </select>
 
+    <insert id="addUser" parameterType="com.duanzm.entity.User">
+        INSERT INTO person(id, name, age, sex) VALUE(#{id}, #{name}, #{age}, #{sex})
+    </insert>
 </mapper>

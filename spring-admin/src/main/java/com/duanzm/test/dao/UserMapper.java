@@ -13,4 +13,6 @@ public interface UserMapper {
     List<User> queryUserList();
 
     List<User> queryUserList2();
+
+    void addUser(User user);
 }
