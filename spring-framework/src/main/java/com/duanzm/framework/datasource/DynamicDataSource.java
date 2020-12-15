@@ -14,6 +14,11 @@ import java.util.Map;
  *    然后通过afterPropertiesSet()方法将数据源分别进行复制到resolvedDataSources和resolvedDefaultDataSource中。
  * 3、调用AbstractRoutingDataSource的 getConnection() 的方法的时候，先调用determineTargetDataSource()方法返回DataSource在进行getConnection()
  */
+
+/**
+ * 因为数据源是自己生成的，所以在启动类上去掉原先springboot启动时候自动装配的数据源配置。
+ * @SpringBootApplication (exclude = {DataSourceAutoConfiguration.class})
+ */
 public class DynamicDataSource extends AbstractRoutingDataSource {
     /**
      *
