@@ -1,4 +1,4 @@
-package com.duanzm.framework.datasource.utils;
+package com.duanzm.framework.utils;
 
 import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.BeansException;

@@ -1,7 +1,7 @@
 package com.duanzm.framework.datasource.aspectj;
 
 import com.duanzm.framework.datasource.DynamicDataSourceContextHolder;
-import com.duanzm.framework.datasource.utils.StringUtils;
+import com.duanzm.framework.utils.StringUtils;
 import com.duanzm.framework.datasource.annotation.DataSource;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

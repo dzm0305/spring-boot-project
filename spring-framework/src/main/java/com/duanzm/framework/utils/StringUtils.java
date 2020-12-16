@@ -1,4 +1,4 @@
-package com.duanzm.framework.datasource.utils;
+package com.duanzm.framework.utils;
 
 /**
  * 字符串工具类
