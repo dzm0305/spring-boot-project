@@ -3,6 +3,7 @@ package com.duanzm;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.context.ConfigurableApplicationContext;
 
 //因为数据源是自己生成的，所以要去掉原先springboot启动时候自动装配的数据源配置。
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
@@ -50,7 +51,16 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 public class SpringAdminApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringAdminApplication.class, args);
+
+        //返回 IOC 容器
+        ConfigurableApplicationContext run = SpringApplication.run(SpringAdminApplication.class, args);
+
+        //查看容器里面的组件
+        String[] names = run.getBeanDefinitionNames();
+        for(String name : names) {
+            System.out.println(name);
+        }
+
     }
 
 }
