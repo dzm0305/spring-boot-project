@@ -62,4 +62,9 @@ public class AdminTest {
         User user = new User("10", "小o", 3, "2");
         userServiceTest.addUser(user);
     }
+
+    @RequestMapping("/vue01")
+    public String vue01(){
+        return "1";
+    }
 }

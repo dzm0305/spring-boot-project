@@ -1,4 +1,4 @@
-package com.duanzm.framework.utils;
+package com.duanzm.framework.utils.spring;
 
 import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.BeansException;
@@ -25,12 +25,12 @@ public final class SpringUtils implements BeanFactoryPostProcessor, ApplicationC
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-        SpringUtils.beanFactory = beanFactory;
+        beanFactory = beanFactory;
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        SpringUtils.applicationContext = applicationContext;
+        applicationContext = applicationContext;
     }
 
     /**
@@ -111,9 +111,21 @@ public final class SpringUtils implements BeanFactoryPostProcessor, ApplicationC
 
     /**
      * 获取当前的环境配置，无配置返回null
+     *
      * @return 当前的环境配置
      */
     public static String[] getActiveProfiles() {
         return applicationContext.getEnvironment().getActiveProfiles();
+    }
+
+    /**
+     * 获取当前的环境配置，当有多个环境配置时，只获取第一个
+     *
+     * @return 当前的环境配置
+     */
+    public static String getActiveProfile() {
+        final String[] activeProfiles = getActiveProfiles();
+        //return StringUtils.isNotEmpty(activeProfiles) ? activeProfiles[0] : null;
+        return null;
     }
 }

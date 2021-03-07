@@ -1,4 +1,4 @@
-package com.duanzm.test.dao;
+package com.duanzm.test.mapper;
 
 import com.duanzm.entity.User;
 import org.apache.ibatis.annotations.Mapper;

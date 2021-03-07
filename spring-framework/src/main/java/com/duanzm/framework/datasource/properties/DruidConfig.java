@@ -6,7 +6,7 @@ import com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatPropertie
 import com.alibaba.druid.util.Utils;
 import com.duanzm.framework.datasource.DynamicDataSource;
 import com.duanzm.framework.datasource.enums.DataSourceType;
-import com.duanzm.framework.utils.SpringUtils;
+import com.duanzm.framework.utils.spring.SpringUtils;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

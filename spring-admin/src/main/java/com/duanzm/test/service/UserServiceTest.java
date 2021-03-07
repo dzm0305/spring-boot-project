@@ -3,7 +3,7 @@ package com.duanzm.test.service;
 import com.duanzm.entity.User;
 import com.duanzm.framework.datasource.annotation.DataSource;
 import com.duanzm.framework.datasource.enums.DataSourceType;
-import com.duanzm.test.dao.UserMapper;
+import com.duanzm.test.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
